@@ -4,6 +4,7 @@ import Title from "@/components/title";
 import {Button} from "@/components/ui/button";
 import {useState} from "react";
 import dynamic from "next/dynamic";
+// import MapaComponentMini from "@/components/home/MapaComponentMini";
 // Carga dinámica del componente MapaComponentMini
 const MapaComponentMini = dynamic(() => import('@/components/home/MapaComponentMini'), { ssr: false });
 
@@ -28,7 +29,8 @@ export default function InfoDetails() {
 
                     <VStack align='start' py={'10px'} gap={'10px'}>
                         <Text color={'#737791'}>Username</Text>
-                        <Box color={'#2D3748'} lineHeight={'19.36px'} h={'40px'} display={'flex'}
+                        <Box borderColor={'#E2E8F0'} color={'#2D3748'} lineHeight={'19.36px'} h={'40px'}
+                             display={'flex'}
                              alignItems={'center'} w={'100%'} borderWidth={'1px'}
                              px={'16px'} borderRadius={'4px'}>rolando</Box>
                     </VStack>
@@ -37,14 +39,16 @@ export default function InfoDetails() {
 
                         <VStack align={'start'} w={'100%'} gap={'10px'} py={'10px'}>
                             <Text color={'#737791'}>Firstname</Text>
-                            <Box color={'#2D3748'} lineHeight={'19.36px'} h={'40px'} display={'flex'}
+                            <Box borderColor={'#E2E8F0'} color={'#2D3748'} lineHeight={'19.36px'} h={'40px'}
+                                 display={'flex'}
                                  alignItems={'center'} w={'100%'} borderWidth={'1px'}
                                  px={'16px'} borderRadius={'4px'}> Rolando </Box>
                         </VStack>
 
                         <VStack align={'start'} w={'100%'} gap={'10px'} py={'10px'}>
                             <Text color={'#737791'}>Lastname</Text>
-                            <Box color={'#2D3748'} lineHeight={'19.36px'} h={'40px'} display={'flex'}
+                            <Box borderColor={'#E2E8F0'} color={'#2D3748'} lineHeight={'19.36px'} h={'40px'}
+                                 display={'flex'}
                                  alignItems={'center'} w={'100%'} borderWidth={'1px'}
                                  px={'16px'} borderRadius={'4px'}>Fonseca
                                 Martines </Box>
@@ -54,7 +58,8 @@ export default function InfoDetails() {
 
                     <VStack align='start' py={'10px'} gap={'10px'}>
                         <Text color={'#737791'}>Identity Card</Text>
-                        <Box color={'#2D3748'} lineHeight={'19.36px'} h={'40px'} display={'flex'}
+                        <Box borderColor={'#E2E8F0'} color={'#2D3748'} lineHeight={'19.36px'} h={'40px'}
+                             display={'flex'}
                              alignItems={'center'} w={'100%'} borderWidth={'1px'}
                              px={'16px'} borderRadius={'4px'}>8502034587</Box>
                     </VStack>
@@ -63,14 +68,16 @@ export default function InfoDetails() {
 
                         <VStack align={'start'} w={'100%'} gap={'10px'} py={'10px'}>
                             <Text color={'#737791'}>Phone Number</Text>
-                            <Box color={'#2D3748'} lineHeight={'19.36px'} h={'40px'} display={'flex'}
+                            <Box borderColor={'#E2E8F0'} color={'#2D3748'} lineHeight={'19.36px'} h={'40px'}
+                                 display={'flex'}
                                  alignItems={'center'} w={'100%'} borderWidth={'1px'}
                                  px={'16px'} borderRadius={'4px'}> +5357412369 </Box>
                         </VStack>
 
                         <VStack align={'start'} w={'100%'} gap={'10px'} py={'10px'}>
                             <Text color={'#737791'}>Email</Text>
-                            <Box color={'#2D3748'} lineHeight={'19.36px'} h={'40px'} display={'flex'}
+                            <Box borderColor={'#E2E8F0'} color={'#2D3748'} lineHeight={'19.36px'} h={'40px'}
+                                 display={'flex'}
                                  alignItems={'center'} w={'100%'} borderWidth={'1px'}
                                  px={'16px'} borderRadius={'4px'}>rolando@gmail.com</Box>
                         </VStack>
@@ -94,7 +101,7 @@ export default function InfoDetails() {
 
                 <HStack justifyContent='space-between' gap={'0px'}>
                     <Title title='Shipping Address' subTitle='Order Shipping Address'/>
-                    <Button borderRadius={'16px'} px={'16px'} bg={'#FF7500'}>Assign</Button>
+                    <Button color={'#FFFFFF'} borderRadius={'16px'} px={'16px'} bg={'#FF7500'}>Assign</Button>
                 </HStack>
 
                 <Flex direction={'column'} gap={'20px'} py={'10px'}>

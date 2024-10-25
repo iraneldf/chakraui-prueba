@@ -11,7 +11,8 @@ import SelectButton from "@/views/home/table-seccion/table-selec-button";
 import {Field} from "@/components/ui/field";
 import {useMyContext} from "@/context/ShowMapContext";
 import {Avatar} from "@/components/ui/avatar";
-import dynamic from 'next/dynamic'; // Importa dynamic
+import dynamic from 'next/dynamic';
+// import MapaComponent from "@/components/home/MapaComponent"; // Importa dynamic
 
 // Carga dinámica del componente MapaComponent
 const MapaComponent = dynamic(() => import('@/components/home/MapaComponent'), {ssr: false});
@@ -49,12 +50,12 @@ const Tabla = () => {
             <Flex display={showMap ? 'none' : 'block'} direction="column" gap={'20px'} py={'10px'}>
                 <Flex justify="space-between">
                     <HStack gap={'10px'} px={'12px'}>
-                        <SelectButton/> <Text color={'#737791'}>Entries per page</Text>
+                        <SelectButton /> <Text color={'#737791'}>Entries per page</Text>
                     </HStack>
 
                     <HStack gap={'10px'} px={'12px'}>
                         <Text color={'#737791'}>Search</Text>
-                        <Field w={'222px'}>
+                        <Field borderColor={'#E2E8F0'} w={'222px'}>
                             <Input w={'222px'}/>
                         </Field>
                     </HStack>
@@ -64,9 +65,9 @@ const Tabla = () => {
                 <Box p={'12px'} borderRadius={'12px'}>
 
                     <Table.Root size="md" interactive>
-                        <Table.Header>
+                        <Table.Header >
 
-                            <Table.Row>
+                            <Table.Row bg={'transparent'}>
                                 <Table.ColumnHeader borderColor={'#FFFFFF'} letterSpacing="0.05em"
                                                     fontSize={"12px"}
                                                     fontWeight={"700"}
@@ -101,7 +102,7 @@ const Tabla = () => {
                                                 borderColor={'#FFFFFF'}>{item.id}</Table.Cell>
                                     <Table.Cell borderColor={'#FFFFFF'}>
                                         <HStack gap={'8px'}>
-                                            <Avatar ml={'10px'} name="Oshigaki Kisame"
+                                            <Avatar bg={'transparent'} ml={'10px'} name="Oshigaki Kisame"
                                                     src={item.avatar}/>
                                             {item.name}
                                         </HStack>
@@ -111,7 +112,7 @@ const Tabla = () => {
                                     <Table.Cell borderColor={'#FFFFFF'}>{item.price}</Table.Cell>
 
                                     <Table.Cell borderColor={'#FFFFFF'} textAlign="end">
-                                        <Button px={'8px'} fontSize={'12px'} w={'56px'} h={'24px'}
+                                        <Button color={'#FFFFFF'} px={'8px'} fontSize={'12px'} w={'56px'} h={'24px'}
                                                 bg={"#FF7500"}
                                                 borderRadius={"16px"}
                                         >

@@ -26,7 +26,7 @@ const AssignmentsComponentLayout = ({
         alignItems='center'
         gap='1rem'
       >
-        <Avatar name='Sage Adebayo' src={avatar} shape='rounded' size='24px' />
+        <Avatar bg={'transparent'} name='Sage Adebayo' src={avatar} shape='rounded' size='24px' />
 
         <Text
           fontFamily={'poppins'}

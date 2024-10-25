@@ -31,6 +31,7 @@ export default function MySideBar() {
             px={"20px"}
             py={"30px"}
             boxShadow="none"
+            bg={'#FFFFFF'}
         >
             <Flex direction="column" justify-conten={"center"} width={"229px"}>
                 {/* Título del sidebar */}
@@ -56,7 +57,7 @@ export default function MySideBar() {
 
 
                 {/* Separador */}
-                <Separator my={"20px"} w={"229px"}/>
+                <Separator boderWidth={'2px'} borderColor={'#EDF2F7'} my={"20px"} w={"229px"}/>
 
                 {/* 2do Título del sidebar */}
                 <Heading color={"#737791"} fontWeight="700" size="16px">Nomenclators</Heading>
@@ -73,7 +74,7 @@ function CustomHoverCard({title, IconComponent, active}) {
     const [hovered, setHovered] = React.useState(false);
 
     return (
-        <Link href={"/"}>
+        <Link href={"/details"}>
             <Box
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}

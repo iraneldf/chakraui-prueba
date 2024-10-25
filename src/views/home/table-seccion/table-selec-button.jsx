@@ -12,12 +12,13 @@ import {
 // todo ver aki el estilo o fuente (lato) del numero q sale
 const SelectButton = () => {
     return (
-        <SelectRoot fontFamily="'Inter Regular', sans-serif" collection={entries} size="sm" width="98px" borderRadius={'6px'} borderWidth={'1px'}>
+        <SelectRoot fontFamily="'Inter Regular', sans-serif" collection={entries} size="sm" width="98px"
+                    borderRadius={'6px'} borderWidth={'1px'}>
             <SelectTrigger>
-                <SelectValueText placeholder="10"/>            </SelectTrigger>
-            <SelectContent>
+                <SelectValueText placeholder="10"/></SelectTrigger>
+            <SelectContent bg={'#FFFFFF'}>
                 {entries.items.map((movie) => (
-                    <SelectItem item={movie} key={movie.value}>
+                    <SelectItem _hover={{bg: "#FF7500"}} color={'black'} item={movie} key={movie.value}>
                         {movie.label}
                     </SelectItem>
                 ))}

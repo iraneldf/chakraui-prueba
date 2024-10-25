@@ -17,18 +17,23 @@ const customIcon = new L.Icon({
     // shadowUrl: '/leaflet/marker-shadow.png' // Ruta a la sombra del icono, si la tienes
 });
 
-// // eslint-disable-next-line react-hooks/rules-of-hooks
-// const mapRef = useRef();
-//
-// // eslint-disable-next-line react-hooks/rules-of-hooks
-// useEffect(() => {
-//     if (mapRef.current) {
-//         // Limpiar el mapa cuando el componente se desmonte
-//         mapRef.current.remove();
-//     }
-// }, []);
 
 const MapaComponent = ({height = '526px', width = '1084px'}) => {
+
+    const mapRef = useRef();
+
+
+    useEffect(() => {
+        const mapInstance = mapRef.current; // Copiar la referencia actual a una variable
+
+        return () => {
+            if (mapInstance) {
+                mapInstance.remove(); // Limpiar el mapa usando la copia de la referencia
+            }
+        };
+    }, []); // Dependencias vacías para que se ejecute una vez al montar
+
+
     const position1 = [51.505, -0.09]; // Coordenadas del primer marcador
     const position2 = [51.504, -0.08]; // Coordenadas del segundo marcador
 
@@ -39,11 +44,7 @@ const MapaComponent = ({height = '526px', width = '1084px'}) => {
 
 
     return (
-        <MapContainer key={1} center={position1} zoom={13} style={{height, width}}>
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
+        <MapContainer key={position1.join(',')} center={position1} zoom={13} style={{height, width}}>
 
             <Marker position={position1} icon={customIcon}>
                 <Popup>

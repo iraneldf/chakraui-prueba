@@ -20,7 +20,7 @@ export default function ProductStatusInfo() {
                     <Table.Root  size="md" interactive>
                         <Table.Header>
 
-                            <Table.Row>
+                            <Table.Row bg={'transparent'}>
                                 <Table.ColumnHeader borderColor={'#FFFFFF'}  letterSpacing="0.05em" fontSize={"12px"} fontWeight={"700"}
                                                     color={"#4A5568"}>NOMBRE</Table.ColumnHeader>
                                 <Table.ColumnHeader borderColor={'#FFFFFF'}  letterSpacing="0.05em" fontSize={"12px"} fontWeight={"700"}
@@ -51,13 +51,13 @@ export default function ProductStatusInfo() {
                     px={'35px'}>
                 <HStack w={'100%'} justify="space-between">
                     <Title subTitle={'Status Orders'} title={'Status'}/>
-                    <Button bg={'#FF7500'} borderRadius={'16px'} w={'147px'}>Change Status</Button>
+                    <Button bg={'#FF7500'} color={'#FFFFFF'} borderRadius={'16px'} w={'147px'}>Change Status</Button>
                 </HStack>
 
                 <Box py={'10px'} w={'100%'}>
                     <Table.Root size="md" interactive>
                         <Table.Header>
-                            <Table.Row>
+                            <Table.Row bg={'transparent'}>
                                 <Table.ColumnHeader borderColor={'#FFFFFF'}  letterSpacing="0.05em" fontSize={"12px"} fontWeight={"700"}
                                                     color={"#4A5568"}>FECHA</Table.ColumnHeader>
                                 <Table.ColumnHeader borderColor={'#FFFFFF'}  letterSpacing="0.05em" fontSize={"12px"} fontWeight={"700"}

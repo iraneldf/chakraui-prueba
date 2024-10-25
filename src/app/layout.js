@@ -1,5 +1,5 @@
 import {Provider} from "@/components/ui/provider"
-
+import '@/app/globals.css'
 import {
     Box, Flex, VStack,
 } from '@chakra-ui/react';
@@ -27,7 +27,7 @@ export default function RootLayout({children}) {
     return (<html lang='es' suppressHydrationWarning>
     <body className={`${poppins.className}`}>
     <Provider>
-        <Flex direction="row">
+        <Flex bg={'#FFFFFF'} direction="row">
             {/*    /!* Barra de navegacion lateral *!/*/}
             <MySideBar/>
 

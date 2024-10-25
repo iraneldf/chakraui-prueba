@@ -35,7 +35,7 @@ export default function NavBarComponent() {
             <Box mr={"20px"} display={{base: 'none', md: 'block'}}>
 
                 <HStack gap={'40px'}>
-                    <Group color={'#A0AEC0'} attached>
+                    <Group w={'323px'} h={'40px'} color={'#A0AEC0'} borderColor={'#A0AEC0'} attached>
                         <Input borderRadius={'20px'} borderInlineEndWidth='0px' placeholder="Find Client"/>
                         <Button borderRadius={'20px'} borderInlineStartWidth="0px" variant="outline">
                             <Image
@@ -48,13 +48,13 @@ export default function NavBarComponent() {
 
 
                     <HStack gap={"10px"}>
-                        <IconButton color={"#68CCE0"} aria-label="Call support" variant={"subtle"} rounded="full">
+                        <IconButton _hover={{ bg: "#FF7500", transform: "scale(1.05)" }} bg={'#EDF2F7'} color={"#68CCE0"} aria-label="Call support" variant={"subtle"} rounded="full">
                             <SlGlobe/>
                         </IconButton>
-                        <IconButton color={"#718EBF"} aria-label="Call support" variant={"subtle"} rounded="full">
+                        <IconButton _hover={{ bg: "#FF7500", transform: "scale(1.05)" }} bg={'#EDF2F7'} color={"#718EBF"} aria-label="Call support" variant={"subtle"} rounded="full">
                             <SlSettings/>
                         </IconButton>
-                        <Avatar ml={'10px'} name="Oshigaki Kisame" src="/assets/images/avatar.png"/>
+                        <Avatar bg={'#EDF2F7'} ml={'10px'} name="Oshigaki Kisame" src="/assets/images/avatar.png"/>
                     </HStack>
                 </HStack>
 

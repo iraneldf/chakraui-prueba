@@ -1,6 +1,6 @@
 "use client"
 
-import { createListCollection } from "@chakra-ui/react"
+import {createListCollection} from "@chakra-ui/react"
 import {
     SelectContent,
     SelectItem,
@@ -12,10 +12,10 @@ import {
 
 const MySelect = () => {
     return (
-        <SelectRoot collection={frameworks} size="sm" width="320px">
+        <SelectRoot borderColor={'#E2E8F0'} collection={frameworks} size="sm" width="320px">
             <SelectLabel color={'#737791'}>MESSANGER</SelectLabel>
             <SelectTrigger>
-                <SelectValueText placeholder="Pedro Cruz Dominguez" />
+                <SelectValueText placeholder="Pedro Cruz Dominguez"/>
             </SelectTrigger>
             <SelectContent>
                 {frameworks.items.map((movie) => (
@@ -30,10 +30,10 @@ const MySelect = () => {
 
 const frameworks = createListCollection({
     items: [
-        { label: "Pedro Cruz Dominguez", value: "react" },
-        { label: "Pedro Cruz Dominguez", value: "vue" },
-        { label: "Pedro Cruz Dominguez", value: "angular" },
-        { label: "Pedro Cruz Dominguez", value: "svelte" },
+        {label: "Pedro Cruz Dominguez", value: "react"},
+        {label: "Pedro Cruz Dominguez", value: "vue"},
+        {label: "Pedro Cruz Dominguez", value: "angular"},
+        {label: "Pedro Cruz Dominguez", value: "svelte"},
     ],
 })
 
