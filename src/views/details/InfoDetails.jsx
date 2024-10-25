@@ -3,7 +3,9 @@ import {Box, Flex, HStack, Text, Textarea, VStack} from "@chakra-ui/react";
 import Title from "@/components/title";
 import {Button} from "@/components/ui/button";
 import {useState} from "react";
-import MapaComponentMini from "@/components/home/MapaComponentMini";
+import dynamic from "next/dynamic";
+// Carga dinámica del componente MapaComponentMini
+const MapaComponentMini = dynamic(() => import('@/components/home/MapaComponentMini'), { ssr: false });
 
 export default function InfoDetails() {
     const [textAreavalue, setTextAreavalue] = useState('Calle 5 e/ 25 y 36 Siboney Playa #4578')

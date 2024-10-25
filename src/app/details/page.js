@@ -5,7 +5,7 @@ import InfoDetails from "@/views/details/InfoDetails";
 import ProductStatusInfo from "@/views/details/Product-Status-Info";
 
 
-export default function Home() {
+export default function Details() {
 
     return (
         <Box

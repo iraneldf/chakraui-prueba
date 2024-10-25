@@ -1,6 +1,6 @@
 // components/MapaComponent.jsx
 'use client';
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {MapContainer, TileLayer, Marker, Popup, Tooltip} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -16,6 +16,17 @@ const customIcon = new L.Icon({
     shadowSize: [41, 41], // Tamaño de la sombra
     // shadowUrl: '/leaflet/marker-shadow.png' // Ruta a la sombra del icono, si la tienes
 });
+
+// // eslint-disable-next-line react-hooks/rules-of-hooks
+// const mapRef = useRef();
+//
+// // eslint-disable-next-line react-hooks/rules-of-hooks
+// useEffect(() => {
+//     if (mapRef.current) {
+//         // Limpiar el mapa cuando el componente se desmonte
+//         mapRef.current.remove();
+//     }
+// }, []);
 
 const MapaComponent = ({height = '526px', width = '1084px'}) => {
     const position1 = [51.505, -0.09]; // Coordenadas del primer marcador

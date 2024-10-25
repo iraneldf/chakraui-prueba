@@ -9,9 +9,13 @@ import {Button} from "@/components/ui/button";
 import Title from "@/components/title";
 import SelectButton from "@/views/home/table-seccion/table-selec-button";
 import {Field} from "@/components/ui/field";
-import MapaComponent from "@/components/home/MapaComponent";
 import {useMyContext} from "@/context/ShowMapContext";
 import {Avatar} from "@/components/ui/avatar";
+import dynamic from 'next/dynamic'; // Importa dynamic
+
+// Carga dinámica del componente MapaComponent
+const MapaComponent = dynamic(() => import('@/components/home/MapaComponent'), {ssr: false});
+
 
 const Tabla = () => {
 

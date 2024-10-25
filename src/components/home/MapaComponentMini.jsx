@@ -1,6 +1,6 @@
 // components/MapaComponent.jsx
 'use client';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -13,18 +13,22 @@ L.Icon.Default.mergeOptions({
     shadowUrl: '/leaflet/marker-shadow.png',
 });
 
+
+// // eslint-disable-next-line react-hooks/rules-of-hooks
+// const mapRef = useRef();
+//
+// // eslint-disable-next-line react-hooks/rules-of-hooks
+// useEffect(() => {
+//     if (mapRef.current) {
+//         // Limpiar el mapa cuando el componente se desmonte
+//         mapRef.current.remove();
+//     }
+// }, []);
+
 const MapaComponentMini = ({height = '282px', width = '428px'}) => {
     const position1 = [51.505, -0.09]; // Coordenadas del primer marcador
     const position2 = [51.504, -0.08]; // Coordenadas del segundo marcador
 
-
-    // Usar un estado para controlar la clave del mapa
-    const [mapKey, setMapKey] = React.useState(0);
-
-    React.useEffect(() => {
-        // Cambiar la clave cuando el componente se monta
-        setMapKey(prevKey => prevKey + 1);
-    }, []);
 
     return (
         <MapContainer key={2} center={position1} zoom={13} style={{height, width}}>
