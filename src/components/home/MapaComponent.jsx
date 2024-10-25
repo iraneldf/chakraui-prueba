@@ -1,6 +1,6 @@
 // components/MapaComponent.jsx
 'use client';
-import React from 'react';
+import React, {useState} from 'react';
 import {MapContainer, TileLayer, Marker, Popup, Tooltip} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -20,6 +20,11 @@ const customIcon = new L.Icon({
 const MapaComponent = ({height = '526px', width = '1084px'}) => {
     const position1 = [51.505, -0.09]; // Coordenadas del primer marcador
     const position2 = [51.504, -0.08]; // Coordenadas del segundo marcador
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
 
     return (

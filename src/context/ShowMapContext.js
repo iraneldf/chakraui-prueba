@@ -12,7 +12,7 @@ export const useMyContext = () => {
 
 // Crear un proveedor del contexto
 export const MyProvider = ({children}) => {
-    const [showMap, setShowMap] = useState(true);
+    const [showMap, setShowMap] = useState(false);
 
     const ponertrue = () => {
         !showMap && setShowMap(true)

@@ -6,10 +6,10 @@ import {
 
 import NavBarComponent from "@/components/NavBar/NavBarComponent";
 import MySideBar from "@/components/SideBar/SideBarComponent";
-
 import {Poppins} from 'next/font/google';
 import FooterComponent from "@/components/Footer/Footer";
 import {MyProvider} from "@/context/ShowMapContext";
+
 
 const poppins = Poppins({
     subsets: ['latin'], // Puedes añadir otros subsets si lo necesitas

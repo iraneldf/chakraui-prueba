@@ -8,22 +8,6 @@ import {
 } from '@/components/ui/pagination'
 import { Button } from '@/components/ui/button'
 
-import { defineTextStyles } from '@chakra-ui/react'
-
-export const textStyles = defineTextStyles({
-  body: {
-    description: 'The body text style - used in paragraphs',
-    value: {
-      fontFamily: 'Lato',
-      fontWeight: '500',
-      fontSize: '16px',
-      lineHeight: '24',
-      letterSpacing: '0',
-      textDecoration: 'None',
-      textTransform: 'None'
-    }
-  }
-})
 
 const Tabla = () => {
   return (
