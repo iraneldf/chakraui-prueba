@@ -128,11 +128,13 @@ const Tabla = () => {
                         </HStack>
 
                         <Flex direction="row" gap={"5px"} alignItems="center">
-                            <PaginationItems/>
+                            <Button color={'#FFFFFF'} bg={'#FF7500'}>1</Button>
+                            <Button bg={'#FFFFFF'} color={'#FF7500'}>2</Button>
+                            <Button bg={'#FFFFFF'} color={'#FF7500'}>3</Button>
                         </Flex>
 
                         <HStack color={"#FF7500"}>
-                            <Text fontFamily={"Lato"}>Next</Text>
+                            <Text fontFamily={"Late, san-serif"}>Next</Text>
                             <GoArrowRight/>
                         </HStack>
 

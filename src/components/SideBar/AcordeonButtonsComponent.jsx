@@ -16,7 +16,7 @@ export default function AcordeonButtonsComponent() {
 
     return (
         // todo ajustas color de la flecha y distancia de la flecha al texto
-        <AccordionRoot  spaceY="4" m="5" variant="plain" color={"#A0AEC0"}  collapsible defaultValue={["b",'a']}>
+        <AccordionRoot  spaceY="4" m="5" variant="plain" color={"#A0AEC0"}  collapsible defaultValue={[]}>
             {items.map((item, index) => (
                 <AccordionItem key={index} value={item.value}>
 

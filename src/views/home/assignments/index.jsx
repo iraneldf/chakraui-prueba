@@ -55,7 +55,7 @@ const Assignments = () => {
                     Assign All
                 </Text>
             </Button>
-            <MyModal ariaHideApp={false} isOpen={isModalOpen} onRequestClose={closeModal}/>
+            <MyModal isOpen={isModalOpen} onRequestClose={closeModal}/>
         </Flex>
     </Box>)
 }
